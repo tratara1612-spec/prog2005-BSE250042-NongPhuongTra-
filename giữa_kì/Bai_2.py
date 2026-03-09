@@ -1,3 +1,4 @@
-for x in range(17, 111,-1):
-    if x % 2 != 0:
+for x in range(111,16, -1):
+    if x % 2 == 1:
         print(x, end=' ')
+print()
