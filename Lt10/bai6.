@@ -1,0 +1,6 @@
+chuoi = input('Nhập chuỗi của bạn: ')
+dao = ''
+for n in chuoi:
+    dao = n + dao
+
+print(f'Chuỗi đảo ngược: {dao}')
