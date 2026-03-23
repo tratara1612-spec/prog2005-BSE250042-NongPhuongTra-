@@ -1,0 +1,26 @@
+hang = int(input("Nhập số hàng: "))
+cot = int(input("Nhập số cột: "))
+
+def nhap_mt(ten):
+    print(f"Nhập ma trận {ten}:")
+    mt = []
+    for i in range(hang):
+        dong = []
+        for j in range(cot):
+            while True:
+                v = input(f"{ten}[{i}][{j}]: ").strip()
+                if v == "":
+                    print("Lỗi: Không được để trống!")
+                else:
+                    dong.append(float(v))
+                    break
+        mt.append(dong)
+    return mt
+
+A = nhap_mt("A")
+B = nhap_mt("B")
+print("Kết quả:")
+for i in range(hang):
+    for j in range(cot):
+        print(A[i][j] + B[i][j], end=" ")
+    print()
