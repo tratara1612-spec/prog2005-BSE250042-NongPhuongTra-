@@ -40,8 +40,6 @@ try:
         for b in list_books:
             line = f"{b.name};{b.price}\n"
             f.write(line)
-
-        # Ghi dòng tổng cộng
         f.write(f"Tong;{tong_tien}")
 
     print(f"---")
