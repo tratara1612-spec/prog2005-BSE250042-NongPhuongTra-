@@ -1,18 +1,22 @@
-
 class Book:
     def __init__(self, name, price):
-        self.__name = name
-        self.__price = price
+        self._name = name
+        self._price = price
+        
+    @property
+    def name(self):
+        return self._name
+    @name.setter
+    def name(self, value):
+        self._name = value
 
-    def get_name(self):
-        return self.__name
-    def set_name(self, name):
-        self.__name = name
+    @property
+    def price(self):
+        return self._price
+    @price.setter
+    def price(self, value):
+        self._price = value
 
-    def get_price(self):
-        return self.__price
-    def set_price(self, price):
-        self.__price = price
 
-book1 = Book("Lập trình Python", 50000)
-print(f'Giá tiền của sách: {book1.get_price()}')
+book_sample = Book("Python Cơ Bản", 150000)
+print(f"Giá của đối tượng book_sample là: {book_sample.price}")
